@@ -1,12 +1,33 @@
 import turtle
 
-def quadrado():
-  windown = turtle.Screen()
-  windown.bgcolor("blue")
+def perform():
+  window = turtle.Screen()
+  window.bgcolor("black")
+  draw_square()
+  draw_circle()
+  draw_triangle()
+  window.exitonclick()
 
-  brad = turtle.Turtle()
-  brad.forward(100)
+def draw_square():
+  square = turtle.Turtle()
+  square.shape("turtle")
+  square.color("green")
+  for x in range(0, 4):
+   square.forward(150)
+   square.right(90)  
 
-  windown.exitonclick()
+def draw_circle():
+  circle = turtle.Turtle()
+  circle.shape("circle")
+  circle.color("red")
+  circle.circle(50)
 
-quadrado()
+def draw_triangle():
+  triangle = turtle.Turtle()
+  triangle.shape("arrow")
+  triangle.color("white")
+  for x in range(0, 3):
+    triangle.forward(240)
+    triangle.left(480)
+
+perform()
